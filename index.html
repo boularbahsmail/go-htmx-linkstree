@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{.FullName}}</title>
+    <style>
+      * {
+        font-family: Ubuntu, sans-serif;
+      }
+
+      .container {
+        max-width: 800px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      .links-wrapper {
+        max-width: 800px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      p,
+      .links-wrapper {
+        max-width: 600px;
+        width: 100%;
+        margin-inline: auto;
+      }
+
+      ._90deg {
+        transform: rotate(-90deg);
+      }
+    </style>
+    <!-- Tailwind CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="x-icon" href="{{.Avatar}}" />
+    <script
+      src="https://unpkg.com/htmx.org@1.9.10"
+      integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body
+    class="w-screen min-h-screen px-6 py-8 flex flex-col justify-center items-center"
+  >
+    <div class="container flex flex-col justify-center items-center gap-3">
+      <div
+        class="p-1 h-36 w-36 border border-gray-200 border-dashed rounded-full bg-white shadow-md mb-2"
+      >
+        <img
+          src="{{.Avatar}}"
+          class="rounded-full h-full w-full sahdow-lg"
+          alt="User Avatar"
+        />
+      </div>
+      <h2 class="text-3xl font-black">{{.FullName}}</h2>
+      <p class="text-center text-gray-400 text-sm leading-6">{{.Bio}}</p>
+      <div
+        class="links-wrapper mt-4 w-full mx-auto flex justify-center items-center flex-wrap gap-3"
+      >
+        {{range .Links}} {{range .}}
+        <a
+          href="{{.Url}}"
+          target="_blank"
+          class="w-max bg-gray-50 py-2.5 px-5 border border-gray-200 rounded-full flex justify-center items-center gap-4 duration-300 ease-in-out hover:bg-blue-500 hover:text-white hover:border-blue-500"
+          title="{{.Title}}"
+        >
+          <img
+            src="{{.Icon}}"
+            class="h-4 w-4 grayscale"
+            alt="{{.Title}} Icon"
+          />
+          <span class="font-semibold text-sm">{{.Title}}</span>
+          <!-- <span class="_90deg text-md">⇲</span> -->
+        </a>
+        {{end}} {{end}}
+      </div>
+    </div>
+  </body>
+</html>

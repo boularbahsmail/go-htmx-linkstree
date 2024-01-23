@@ -46,7 +46,7 @@ var links = map[string][]Link{
 
 func homePage(writer http.ResponseWriter, request *http.Request) {
 	// Rendering and serving HTML template
-	tmpl := template.Must(template.ParseFiles("./index.html"))
+	tmpl := template.Must(template.ParseFiles("./template/index.html"))
 
 	user := User{
 		Avatar:   avatar,

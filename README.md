@@ -1,4 +1,4 @@
-# Go HTMX LinksTree 👽
+# 👽Go HTMX LinksTree
 
 A sophisticated web application written in Go that serves a personal linkstree website. The application elegantly presents user information, including an avatar, full name, bio, and a curated list of social links.
 

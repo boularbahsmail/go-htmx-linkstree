@@ -25,13 +25,13 @@ To get started with the project, follow the steps outlined in the 'Usage' sectio
 1. **Clone the Repository:**
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/boularbahsmail/go-htmx-linkstree
     ```
 
 2. **Navigate to the Project Directory:**
 
     ```bash
-    cd your-repo
+    cd go-htmx-linkstree
     ```
 
 3. **Run the Application:**
